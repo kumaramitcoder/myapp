@@ -10,7 +10,9 @@ const ChildA = () => {
     <div>
       <FirstName.Provider value={data}>
         <LastName.Provider value={data1}>
+        <div>
           <ChildB />
+        </div>
         </LastName.Provider>
       </FirstName.Provider>
     </div>

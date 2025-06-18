@@ -4,7 +4,7 @@ const ApiDemo = () => {
 
     const[data, setData]=useState([])
     const fetchData = () =>{
-        fetch("http://localhost:8181/products")
+        fetch("https://jsonplaceholder.typicode.com/posts")
         .then((res)=>res.json())
         .then((json)=>{
             setData(json)
@@ -18,7 +18,7 @@ const ApiDemo = () => {
   return (
     <div>
         {data.map((r)=>(
-            <li id={r.id}>{r.name}</li>
+            <li id={r.id}>{r.title}</li>
         ))}
     </div>
   )

@@ -4,7 +4,7 @@ const UseEffects = () => {
     
     const[data, setData] = useState([])
     const fetchdata = ()=>{
-        fetch("http://localhost:8181/products")
+        fetch("https://jsonplaceholder.typicode.com/posts")
         .then((res)=>res.json())
         .then((json)=>{
             setData(json)
@@ -19,7 +19,7 @@ const UseEffects = () => {
     
    <div>
         {data.map((item)=>(
-            <li id={item.id}>{item.description}</li>
+            <li id={item.id}>{item.title}</li>
         ))}
    </div>
     
